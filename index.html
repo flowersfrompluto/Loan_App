@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body>
+    <br>
+    <div class="welcome">
+        <h1>WELCOME TO GLOBAL BANK LOAN APP</h1>
+    </div>
+    <br>
+    <div class="form">
+        <p>FILL IN THE APPLICATION FORM WITH CORRECT INFORMATION</p><br>
+        <fieldset>
+            <legend>User Information</legend>
+
+            <select id="title">
+                <option value="">Select a Title</option>
+                <option value="mr">Mr</option>
+                <option value="mrs">Mrs</option>
+                <option value="prof">Prof</option>
+                <option value="chief">Chief</option>
+                <option value="dr">Dr</option>
+            </select><br>
+            <label id="titleError"></label>
+            
+            <br><br>
+
+            <div class="names">
+                <div class="first">
+                    <label id="first">First Name</label><br>
+                    <input type="text" id="firstName" placeholder=" First Name"></input><br>
+                    <label id="firstError"></label>
+                </div>
+                <div class="last">
+                    <label id="last">Last Name</label><br>
+                    <input type="text" id="lastName" placeholder=" Last Name"></input><br>
+                    <label id="lastError"></label>
+                </div>
+                <div class="middle">
+                    <label id="middle">Middle Name</label><br>
+                    <input type="text" id="middleName" placeholder=" Middle Name"></input><br>
+                    <label id="middleError"></label>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="row3">
+                <div class="acct">
+                    <label id="acctBalnc">Current Account Balance</label><br>
+                    <input type="number" id="accountBal" placeholder="Account Balance"></input><br>
+                    <label id="acctError"></label>
+                </div>
+                <div class="loan1">
+                    <label id="loanamnt">Loan Amount</label><br>
+                <input type="number" id="loan" placeholder="Loan Amount"></input><br>
+                <label id="loanError"></label>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="row4">
+                
+                <div class="acctType">
+                    <label id="acctTypeTxt">Account Type</label><br>
+                    <select id="acctType">
+                        <option value="">Select Account Type</option>
+                        <option value="10">Current Account</option>
+                        <option value="5">Savings Account</option>
+                    </select><br>
+                <label id="accttypeError"></label><br><br>
+
+                </div>
+                <div class="credit">
+                    <label id="creditHistoryTxt">Select Your Credit History</label><br>
+                    <select id="creditHistory">
+                        <option value="">Select a Credit History</option>
+                        <option value="1">1 Month</option>
+                        <option value="2">2 Months</option>
+                        <option value="3">3 Months</option>
+                        <option value="4">4 Months</option>
+                        <option value="5">5 Months</option>
+                        <option value="6">6 Months</option>
+                        <option value="7">7 Months</option>
+                        <option value="8">8 Months</option>
+                        <option value="9">9 Months</option>
+                        <option value="10">10 Months</option>
+                    </select><br>
+                    <label id="credithistoryError"></label>
+                </div>
+
+                <div class="deposit">
+                    <label id="lastDepositTxt">Last deposit date</label><br>
+                    <select id="lastDeposit">
+                        <option value="">Select Last deposit date</option>
+                        <option value="one">1 Month</option>
+                        <option value="two">2 Months</option>
+                        <option value="three">3 Months</option>
+                        <option value="four">4 Months</option>
+                        <option value="five">5 Months</option>
+                        <option value="six">6 Months</option>
+                    </select><br>
+                    <label id="depositError"></label><br><br>
+                </div>
+
+            </div>
+            
+            <br><br>
+            
+            <div class="row5">
+                
+                <div class="collected">
+                    <label id="lastDate">Last Loan Collection Date</label><br>
+                    <select id="date">
+                        <option value="">Select Loan Collection Date</option>
+                        <option value="one">1 Month</option>
+                        <option value="two">2 Months</option>
+                        <option value="three">3 Months</option>
+                        <option value="four">4 Months</option>
+                        <option value="five">5 Months</option>
+                        <option value="six">6 Months</option>
+                    </select><br>
+                    <label id="dateError"></label><br><br>
+                </div>
+
+                <div class="collection">
+                    <label id="repaymentTxt">Loan Repayment Period</label><br>
+                    <select id="repayment">
+                        <option value="">Select repayment Period</option>
+                        <option value="one">1 Month</option>
+                        <option value="two">2 Months</option>
+                        <option value="three">3 Months</option>
+                        <option value="four">4 Months</option>
+                        <option value="five">5 Months</option>
+                        <option value="six">6 Months</option>
+                    </select><br>
+                    <label id="repaymentError"></label><br><br>
+                </div>
+
+            </div>
+
+        </fieldset>
+        <br><br>
+        
+        <button id="btn" type="submit">Apply</button>
+        <br><br>
+
+        <label id="messageTxt"></label>
+        <br><br>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

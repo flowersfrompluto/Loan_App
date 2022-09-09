@@ -1,0 +1,113 @@
+* {Margin: 0; padding: 0; box-sizing: border-box; background-color: rgb(236, 236, 238);}
+* {font-family: 'Rubik', sans-serif;}
+
+.welcome {width: 100%; text-align: center; justify-content: center;}
+.form {width: 95%; margin: auto; color: blue;}
+.form p {font-weight: 600; width: 100%; margin: auto; text-align: center;}
+fieldset {padding: 30px;}
+legend {font-weight: 600; width: 11%; margin-left: 100px;}
+
+#title {padding: 5px; text-align: left; font-size: 20px; border-radius: 5px; background-color: #b2dbee; border: 1px solid rgb(0, 44, 94);}
+
+
+/* DIV */
+.names, .row4 {display: flex; width: 90%; justify-content: space-between;}
+.row3, .row5 {display: flex; width: 55%; justify-content: space-between;}
+
+/* LABEL TAGS */
+#creditHistoryTxt, #first, #middle, #last, #acctBalnc, #loanamnt, #lastDate, #lastDepositTxt, #lastDate, #acctTypeTxt, #repaymentTxt{color: #39687e; font-size: 15px;}
+
+#messageTxt {color: #39687e; font-size: 20px; font-weight: 600;}
+
+/* INPUT TAGS */
+#accountBal, #creditHistory, #firstName, #middleName, #lastName, #loan, #date, #date, #repayment, #acctType, #lastDeposit{padding: 5px 0px 5px 15px; text-align: left; font-size: 20px; border-radius: 5px; background-color: #b2dbee; border: 1px solid rgb(0, 44, 94);}
+
+#btn {padding:5px 20px; text-align: left; font-size: 20px; border-radius: 5px; background-color: yellowgreen; border: 1px solid rgb(145, 255, 0); color: black;}
+
+/* ERROR TAGS */
+#accttypeError, #titleError, #firstError, #middleError, #lastError, #acctError, #loanError, #credithistoryError, #dateError, #depositError, #dateError, #repaymentError {color: red; font-size: 12px; text-align: center;}
+
+
+/* HOVER */
+
+#btn:hover {
+    background-color: rgb(206, 245, 147); color: black; border: rgb(206, 245, 147);
+    font-weight: 400;
+}
+#operator:hover {
+    background-color: whitesmoke; color: black;
+    font-weight: 400;
+}
+#select:hover {
+    background-color: whitesmoke; color: black;
+    font-weight: 400;
+}
+#bankNetwork:hover {
+    background-color: whitesmoke; color: black;
+    font-weight: 400;
+}
+#accountNum:hover {
+    background-color: whitesmoke; color: black;
+    font-weight: 400;
+}
+#enterAmount:hover {
+    background-color: whitesmoke; color: black;
+    font-weight: 400;
+}
+#pin:hover {
+    background-color: whitesmoke; color: black;
+    font-weight: 400;
+}
+
+
+
+
+/* MEDIA QUERY */
+
+@media (max-width: 768px){
+    .home {width: 100%; display: block; align-items: center; padding-bottom: 43px; background-repeat: no-repeat; background-position: center center; justify-content: space-between; text-align: center; background-image: url(../IMG/6.gif); background-size: cover; color: whitesmoke; background-attachment: fixed;}
+    .home .bank h1 {font-size: 35px;}
+    .home .text1 {text-decoration: none;}
+    #services h2 {font-weight: 200; font-size: 25px;}
+
+    #operator {padding: 10px; font-size: 15px; font-weight: 600; text-align: center; border-radius: 10px; background-color: #b2dbee; border: 1px solid gainsboro;}
+    #select {padding: 5px 10px; font-size: 15px; font-weight: 600; text-align: center; border-radius: 10px; background-color: #b2dbee; border: 1px solid gainsboro;}
+    #bankNetwork, #accountNum, #enterAmount, #pin {padding: 8px 20px; font-size: 15px; font-weight: 600; text-align: center; border-radius: 5px; background-color: #b2dbee; border: 1px solid gainsboro; font-weight: 400}
+    #verify {padding: 5px 15px; font-size: 15px; font-weight: 600; text-align: center; border-radius: 10px; background-color: greenyellow; border: greenyellow;}
+    #messageTxt {font-size: 15px; font-weight: 600; text-align: center;}
+}
+
+@media (max-width: 425px){
+    .home .bank h1 {font-size: 27px;}
+    .home .text1 {text-decoration: none;}
+    #services h2 {font-weight: 200; font-size: 20px;}
+
+    #operator {padding: 10px; font-size: 12px; font-weight: 600; text-align: center; border-radius: 10px; background-color: #b2dbee; border: 1px solid gainsboro;}
+    #select {padding: 5px 10px; font-size: 12px; font-weight: 600; text-align: center; border-radius: 10px; background-color: #b2dbee; border: 1px solid gainsboro;}
+    #bankNetwork, #accountNum, #enterAmount, #pin {padding: 8px 20px; font-size: 12px; font-weight: 600; text-align: center; border-radius: 5px; background-color: #b2dbee; border: 1px solid gainsboro; font-weight: 400}
+    #verify {padding: 5px 15px; font-size: 15px; font-weight: 600; text-align: center; border-radius: 10px; background-color: greenyellow; border: greenyellow;}
+    #messageTxt {font-size: 12px; font-weight: 600; text-align: center;}
+}
+
+@media (max-width: 375px){
+    .home .bank h1 {font-size: 25px;}
+    .home .text1 {text-decoration: none;}
+    #services h2 {font-weight: 200; font-size: 18px;}
+
+    #operator {padding: 10px; font-size: 10px; font-weight: 600; text-align: center; border-radius: 10px; background-color: #b2dbee; border: 1px solid gainsboro;}
+    #select {padding: 5px 10px; font-size: 10px; font-weight: 600; text-align: center; border-radius: 10px; background-color: #b2dbee; border: 1px solid gainsboro;}
+    #bankNetwork, #accountNum, #enterAmount, #pin {padding: 8px 20px; font-size: 10px; font-weight: 600; text-align: center; border-radius: 5px; background-color: #b2dbee; border: 1px solid gainsboro; font-weight: 400}
+    #verify {padding: 5px 15px; font-size: 15px; font-weight: 600; text-align: center; border-radius: 10px; background-color: greenyellow; border: greenyellow;}
+    #messageTxt {font-size: 10px; font-weight: 600; text-align: center;}
+}
+
+@media (max-width: 320px){
+    .home .bank h1 {font-size: 20px;}
+    .home .text1 {text-decoration: none;}
+    #services h2 {font-weight: 200; font-size: 18px;}
+
+    #operator {padding: 10px; font-size: 10px; font-weight: 600; text-align: center; border-radius: 10px; background-color: #b2dbee; border: 1px solid gainsboro;}
+    #select {padding: 5px 10px; font-size: 10px; font-weight: 600; text-align: center; border-radius: 10px; background-color: #b2dbee; border: 1px solid gainsboro;}
+    #bankNetwork, #accountNum, #enterAmount, #pin {padding: 8px 20px; font-size: 10px; font-weight: 600; text-align: center; border-radius: 5px; background-color: #b2dbee; border: 1px solid gainsboro; font-weight: 400}
+    #verify {padding: 5px 15px; font-size: 15px; font-weight: 600; text-align: center; border-radius: 10px; background-color: greenyellow; border: greenyellow;}
+}
