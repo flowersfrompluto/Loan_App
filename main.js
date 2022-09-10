@@ -24,7 +24,7 @@ let repayment=document.getElementById("repayment")
 let repaymentError=document.getElementById("repaymentError")
 let btn=document.getElementById("btn")
 
-// CHANGE EVENT LISTENER
+let pointAward = 0
 
 // EVENT LISTENER
 
@@ -98,106 +98,77 @@ function validateData(){
     if (title.value != "" &&  firstName.value != "" && lastName.value != "" && accountBal.value != "" && loan.value != "" && acctType.value != "" && creditHistory.value != "" && lastDeposit.value != "" && date.value != "" && repayment.value != ""){
         proceed()
     }
-
     
 }
 
 
-// function acceptValues(){
-    
-    
-//     num1=parseInt(fNum.value)
-//     num2=parseInt(sNum.value)
-//     opr=operator.value
-
-//     calculate()
-    
-// }
-
-
 function proceed(){
+      
 
-    let ans
-
-
-
-    if(accountBal.value >= loan.value){
-        
-        ans = parseInt()
-        if(acctType.value === "10"){
-            if(creditHistory.value >= "6"){
-
-            }
-        }
+    if(accountBal.value > loan.value){
+        pointAward += 10        
+    }else{
+        pointAward -= 10
+    }
+   
+    if(creditHistory.value == "1"){
+        pointAward += 0
+    }else{
+        pointAward += 10
     }
 
-
-
-    // if(acctType.value === "10"){
-    //     if(select.value === "Bank"){
-    //         if(bankNetwork.value  == "Access Bank" || bankNetwork.value == "UBA" || bankNetwork.value == "Zenith Bank" || bankNetwork.value == "GTB" || bankNetwork.value == "Fidelity Bank" || bankNetwork.value == "Access Diamond" || bankNetwork.value == "FCMB" || bankNetwork.value == "Keystone Bank"){      
-    //             if(accountNum.value != ""){
-    //                 if(enterAmount.value <= 20000){
-    //                     if(pin.value == 0000 || pin.value == 1234 || pin.value == 1995 || pin.value == 4177){
-    //                         messageTxt.innerHTML="Transfer Successful !"
-    //                         messageTxt.style.color="yellowgreen"
-    //                         messageTxt.style.fontSize="17px"
-    //                         endService()
-    //                     }else(
-    //                         pinError.innerHTML = "<i>Incorrect Pin !</i>"
-    //                     )
-    //                 }else(
-    //                     enteramountError.innerHTML = "<i>Transfer amount exceeded !</i>"
-    //                 )
-    //             }
-    //         }else{
-    //             banknetworkError.innerHTML="<i>Input right Bank! Bank name is case sensitive</i>"
-    //         }
-    //     }else{
-    //         selectError.innerHTML="Choose right option"
-    //     }
-    // }else if(operator.value === "Airtime"){
-    //     if(select.value === "Network"){
-    //         if(bankNetwork.value  == "MTN" || bankNetwork.value == "Airtel" || bankNetwork.value == "Glo" || bankNetwork.value == "9Mobile" || bankNetwork.value == "mtn" || bankNetwork.value == "airtel" || bankNetwork.value == "glo" || bankNetwork.value == "9mobile"){
-    //             if(accountNum.value != "") {
-    //                 if(enterAmount.value <= 5000){
-    //                     if(pin.value == 0000 || pin.value == 1234 || pin.value == 1995 || pin.value == 4177){
-    //                         messageTxt.innerHTML="Airtime Purchase Successful !"
-    //                         messageTxt.style.color="yellowgreen"
-    //                         messageTxt.style.fontSize="17px"
-    //                         endService()
-    //                     }else(
-    //                         pinError.innerHTML = "<i>Incorrect Pin !</i>"
-    //                     )
-    //                 }else(
-    //                     enteramountError.innerHTML = "<i>Airtime amount exceeded !</i>"
-    //                 )
-    //             }
-    //         }else{
-    //             banknetworkError.innerHTML="<i>Input right network! Network name is case sensitive</i>"
-    //         }
-    //     }else{
-    //         selectError.innerHTML="Choose right option"
-    //     }
-    // }else {
-    //     messageTxt.innerHTML="Congratulations, Your Loan Application is Successful !"
-    //     endService()
-    // }
+    if(lastDeposit.value == "1"){
+        pointAward += 5
+    }else{
+        pointAward += 0
+    }
     
+    if(lastDate.value == "1"){
+        pointAward += 0
+    }else{
+        pointAward += 10
+    }
+
+    if(repayment.value == "1"){
+        pointAward += 5
+    }else{
+        pointAward += 0
+    }
+
+    if(acctType.value == "1"){
+        pointAward += 10
+    }else{
+        pointAward += 5
+    }
+
+    process()
+    
+}
+
+function process(){
+    if (pointAward > 30){
+        messageTxt.innerHTML = "You have " + pointAward + " points and " + "your Loan request has been accepted"
+        messageTxt.style.color = "green"
+    }else {
+        messageTxt.innerHTML =  "You have " + pointAward + " points and " + "your Loan request has been rejected !"
+        messageTxt.style.color = "red"
+    }
+
+    endService()
 }
 
 function endService(){
 
-    title.innerHTML = ""
-    firstName.innerHTML = ""
-    middleName.innerHTML = ""
-    lastName.innerHTML = ""
-    accountBal.innerHTML = ""
-    loan.innerHTML = ""
-    acctType.innerHTML = ""
-    creditHistory.innerHTML = ""
-    lastDeposit.innerHTML = ""
-    date.innerHTML = ""
-    repayment.innerHTML = ""
+    title.value = ""
+    firstName.value = ""
+    middleName.value = ""
+    lastName.value = ""
+    accountBal.value = ""
+    loan.value = ""
+    acctType.value = ""
+    creditHistory.value = ""
+    lastDeposit.value = ""
+    date.value = ""
+    repayment.value = ""
 
 }
